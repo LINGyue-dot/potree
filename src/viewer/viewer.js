@@ -667,7 +667,9 @@ export class Viewer extends EventDispatcher{
 	};
 
 	enableAnnotations () {
+		// 对点注释进行便利
 		this.scene.annotations.traverse(annotation => {
+			// 鼠标指向元素的时候就变为 “手”
 			annotation.domElement.css('pointer-events', 'auto');
 
 			// return annotation.visible;
