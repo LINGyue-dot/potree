@@ -396,6 +396,10 @@ export class Utils {
 		return texture;
 	}
 
+	/**
+	 * 在点云场景中获取鼠标与点云的交点的方法
+	 * 该方法的原理是发出一条从相机位置经过鼠标点击位置的射线，然后检测该射线与点云中的点是否相交。具体来说，它会遍历点云中的每个点，计算射线与每个点之间的距离，如果射线与某个点的距离小于某个阈值（例如点击范围），则判定为相交。
+	 */
 	static getMousePointCloudIntersection (mouse, camera, viewer, pointclouds, params = {}) {
 		
 		let renderer = viewer.renderer;

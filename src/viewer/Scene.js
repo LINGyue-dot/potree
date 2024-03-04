@@ -102,7 +102,7 @@ export class Scene extends EventDispatcher{
 
 		return height;
 	}
-	
+	// 通常是遍历所有的点，来进行生成包围盒
 	getBoundingBox(pointclouds = this.pointclouds){
 		let box = new THREE.Box3();
 
